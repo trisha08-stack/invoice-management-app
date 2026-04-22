@@ -1,0 +1,277 @@
+.detail-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.btn-back:hover {
+  color: var(--purple);
+}
+
+.detail-status-bar {
+  background: var(--surface-color);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-left span:first-child {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background: var(--surface-color);
+  color: var(--text-muted);
+  border: none;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-edit:hover {
+  background: var(--border-color);
+}
+
+.btn-delete {
+  background: #ec5757;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #ff9797;
+}
+
+.btn-paid {
+  background: var(--purple);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-paid:hover {
+  background: var(--purple-hover);
+}
+
+.detail-card {
+  background: var(--surface-color);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.invoice-ref {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.invoice-desc {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.sender-address {
+  text-align: right;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.detail-middle {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.detail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.detail-label {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.detail-items {
+  background: var(--bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.items-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 16px 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.items-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 16px 24px;
+  align-items: center;
+}
+
+.item-name {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.item-qty,
+.item-price {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.item-total {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.items-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #373b53;
+  color: white;
+  padding: 24px;
+  font-weight: 700;
+}
+
+.items-total span:last-child {
+  font-size: 20px;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+
+  .detail-container {
+    padding: 24px 16px;
+  }
+
+  /* stack status bar vertically */
+  .detail-status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* stack action buttons vertically */
+  .detail-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-edit,
+  .btn-delete,
+  .btn-paid {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* stack detail top section */
+  .detail-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sender-address {
+    text-align: left;
+  }
+
+  /* stack detail middle section */
+  .detail-middle {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* items table fix */
+  .items-header {
+    display: none;
+  }
+
+  .items-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .item-name {
+    grid-column: 1 / -1;
+  }
+
+  .items-total {
+    padding: 16px;
+  }
+
+  .detail-card {
+    padding: 24px 16px;
+  }
+}
